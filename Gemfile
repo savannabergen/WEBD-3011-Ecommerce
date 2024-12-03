@@ -63,3 +63,5 @@ gem "devise", "~> 4.9"
 gem "font-awesome-sass", "~> 6.5.1"
 
 gem "stripe", "~> 13.2"
+
+gem "faker", "~> 3.5"
