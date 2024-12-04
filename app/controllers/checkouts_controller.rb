@@ -5,7 +5,7 @@ class CheckoutsController < ApplicationController
     cart = params[:cart]
     line_items = cart.map do |item|
       product = Product.find(item["id"])
-      product_stock = product.stocks.find{ |ps| ps.size == item["size"] }
+      product_stock = product.stocks.find { |ps| ps.size == item["size"] }
 
       if product_stock.amount < item["quantity"].to_i
         render json: { error: "Not enough stock for #{product.name} in size #{item["size"]}. Only #{product_stock.amount} left." }, status: 400
@@ -33,7 +33,7 @@ class CheckoutsController < ApplicationController
       success_url: "http://localhost:3000/success",
       cancel_url: "http://localhost:3000/cancel",
       shipping_address_collection: {
-        allowed_countries: ['US', 'CA']
+        allowed_countries: [ "US", "CA" ]
       }
     )
 
