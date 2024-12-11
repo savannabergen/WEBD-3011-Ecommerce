@@ -26,7 +26,7 @@ class WebhooksController < ApplicationController
       shipping_details = session["shipping_details"]
       puts "Session: #{session}"
       if shipping_details
-        address = "#{shipping_details['address']['line1']} #{shipping_details['address']['city']}, #{shipping_details['address']['state']} #{shipping_details["address"]["postal_code"]}"
+        address = "#{shipping_details['address']['line1']} #{shipping_details['address']['city']}, #{shipping_details['address']['province']} #{shipping_details["address"]["postal_code"]}"
       else
         address = ""
       end
