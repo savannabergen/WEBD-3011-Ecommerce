@@ -1,11 +1,5 @@
 require 'faker'
 
-Admin.create!(
-  email: 'admin@example.com',
-  password: 'password',
-  password_confirmation: 'password'
-)
-
 categories = [
   { name: 'T-Shirts', description: 'Casual and comfortable tees' },
   { name: 'Hoodies', description: 'Cozy and stylish hoodies' },

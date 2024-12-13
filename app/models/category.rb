@@ -4,4 +4,6 @@ class Category < ApplicationRecord
   end
 
   has_many :products, dependent: :destroy
+
+  validates :name, uniqueness: true
 end

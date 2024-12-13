@@ -7,4 +7,7 @@ class Product < ApplicationRecord
   has_many :order_products, dependent: :destroy
   has_many :stocks, dependent: :destroy
   belongs_to :category
+
+  validates :name, presence: true
+  validates :description, presence: true, length: { minimum: 10, maximum: 500 }
 end
