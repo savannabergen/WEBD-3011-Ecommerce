@@ -69,3 +69,5 @@ gem "faker", "~> 3.5"
 gem "pagy", "~> 9.3"
 
 gem "sqlite3", "~> 2.4"
+
+gem "aws-sdk-s3", require: false
